@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Combined font import -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Contact Me</title>
+  </head>
+
+  <body>
+    <article class="main_container">
+      <header id="page_top">
+        <div class="header_left">
+          <p class="name">Saima Abbas</p>
+
+          <p id="id_banner">
+            Data Analyst | Machine Learning Enthusiast | Data Storyteller
+          </p>
+        </div>
+
+        <nav class="navigation">
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li class="dropdown">
+              <a href="projects.html">Projects</a>
+              <ul class="dropdown-menu">
+                <li><a href="market.html">2Market</a></li>
+                <li><a href="nhs.html">NHS Analysis</a></li>
+                <li><a href="turtle_games.html">Turtle Games</a></li>
+                <li><a href="employer_project.html">Employer Project</a></li>
+              </ul>
+            </li>
+
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="contact-container">
+        <h2 class="contact-me">Contact Me</h2>
+        <form
+          action="mailto:saima_abbas@hotmail.com"
+          method="POST"
+          enctype="text/plain"
+        >
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="form-button" type="submit">Send Message</button>
+        </form>
+      </div>
+    </article>
+    <footer>
+      <p id="personal-brand">
+        © 2025 Saima Abbas | Designed, developed, and deployed by me &ndash;
+        powered by curiosity and caffeine.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Combined font import -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=DM+Serif+Display:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>NHS Data Analysis</title>
+  </head>
+  <body>
+    <header id="page_top">
+      <div class="header_left">
+        <p class="name">Saima Abbas</p>
+
+        <p id="id_banner">
+          Data Analyst | Machine Learning Enthusiast | Data Storyteller
+        </p>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <li class="dropdown">
+            <a href="projects.html">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a href="market.html">2Market</a></li>
+              <li><a href="nhs.html">NHS Analysis</a></li>
+              <li><a href="turtle_games.html">Turtle Games</a></li>
+              <li><a href="employer_project.html">Employer Project</a></li>
+            </ul>
+          </li>
+
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="main_container">
+      <h1 class="main_heading">Applying Python to NHS Dataset</h1>
+
+      <h2 class="secondary_heading">Overview:</h2>
+      <p class="projects-intro">
+        As part of the
+        <strong> Data Analytics Online Career Accelerator</strong> (Course 2), I
+        conducted an in-depth analysis of real NHS datasets to explore how the
+        UK's healthcare system is responding to increased patient demand,
+        digital engagement, and missed appointments. This project combined
+        Python-based exploratory analysis, data visualisation, and public
+        Twitter sentiment to derive actionable healthcare insights.
+      </p>
+
+      <br />
+      <br />
+      <h3>The analysis focused on:</h3>
+      <!-- <p class="bullets-intro"> -->
+
+      <ul class="bullets-intro">
+        <li>
+          Utilisation trends across appointment types, modes, healthcare
+          professionals and Time between Booking and Appointment
+        </li>
+        <br />
+
+        <li>Staff and capacity evaluation across regions</li>
+        <br />
+
+        <li>Patient behaviour patterns, including missed appointments</li>
+        <br />
+        <li>Public sentiment and trend tracking via Twitter hashtags</li>
+        <br />
+      </ul>
+
+      <h3>
+        Based on the gathered insights, I was able to make the following
+        recommendations:
+      </h3>
+      <!-- < class="bullets-intro"> -->
+      <ul class="bullets-intro">
+        <li>
+          NHS appears to be operating within its daily appointment capacity, but
+          service delivery could be more evenly distributed..
+        </li>
+        <br />
+        <li>
+          Implement automated reminder systems targeting the 8 – 14 day
+          lead-time window, where missed appointments are most common.
+        </li>
+        <br />
+        <li>
+          Address "Unknown" and "Unmapped" entries in appointment data to
+          improve data quality. Train staff in accurate data collection to
+          improve data quality.
+        </li>
+        <br />
+        <li>
+          Leverage high-performing Twitter themes and hashtags for public
+          campaigns — e.g., use #Healthcare and #DigitalHealth to raise
+          awareness and gather feedback.
+        </li>
+        <br />
+        <li>
+          Expand and promote alternative modes like video consultations to ease
+          in-person demand.
+        </li>
+        <br />
+        <li>
+          Strengthen holiday coverage and flexible access strategies for dips in
+          activity (December, April).
+        </li>
+        <br />
+      </ul>
+
+      <h2 class="secondary_heading">Approach:</h2>
+      <p class="projects-intro">
+        For this project Python was used for Data wrangling, Scraping and
+        Visualisation (Pandas, Matplotlib, Seaborn, Beautiful Soup). APIs and
+        webscraping were also used.
+
+        <br />
+        To answer the NHS's questions, I used Python with Pandas, Seaborn, and
+        Matplotlib to clean, analyse, and visualise four datasets:
+        actual_duration.csv, appointments_regional.csv,
+        national_categories.xlsx, and tweets.csv. Key steps included:
+      </p>
+      <h2 class="secondary_heading">Key Insights:</h2>
+      <div class="key-insights-04">
+        <div class="project-text">
+          <ul class="key-bullets-points">
+            <li>
+              Appointment volume peaked in October 2021 and March 2022, aligning
+              with seasonal health pressures (e.g., flu season). Despite high
+              appointment volumes, average daily utilisation remained within the
+              NHS guideline of 1.2 million per day, indicating that the NHS has
+              adequate capacity at the national level.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-03">
+          <img
+            class="nhs-utilisation"
+            src="Images/nhs_utilisation_capacity.jpg"
+            alt="Monthly Capacity Utilisation of Daily Appointments"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-05">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li class="hidden-text">
+              General Practice dominates appointment volumes, especially in
+              winter months. GPs and Other Practice Staff share the bulk of the
+              workload.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-03">
+          <img
+            class="nhs-images"
+            src="Images/appointments_by_service _settings.jpg"
+            alt="Number of Patient Appointments per month by Service Settings"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li>
+              Face-to-face appointments dominated, but telephone consultations
+              were also heavily used — suggesting a successful hybrid model.
+              Home visits and video consultations remained low but stable,
+              pointing to potential underuse or limited applicability.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-02">
+          <img
+            id="nhs-modes"
+            src="Images/appointments_mode.jpg"
+            alt="Monthly Appointments Counts by Appointment Mode"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li>
+              Most appointments are booked same-day or within a week,
+              highlighting the need for short-notice availability.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-02">
+          <img
+            id="nhs-modes"
+            src="Images/time_between_appt_book.jpg"
+            alt="Time Between Booking and Appointment Over 11 Month Period"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li>
+              Missed appointments "Did Not Attend" (DNAs) are highest for
+              bookings made 8–14 days in advance — these may benefit most from
+              targeted reminders.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-02">
+          <img
+            id="nhs-modes"
+            src="Images/missed_appts_tba.jpg"
+            alt="Missed Appointments by Time Between Booking and Appointment"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li>
+              Appointment mode affects attendance: Face-to-face appointments
+              have the highest DNA (Did Not Attend) rate, while home visits and
+              phone consultations see better follow-through.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-02">
+          <img
+            id="nhs-modes"
+            src="Images/missed_appts_mode.jpg"
+            alt="Missed Appointments over months by Appointment Mode"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-isights-text">
+          <ul class="key-bullets-points">
+            <li>
+              Top Twitter hashtags included #Healthcare, #MedTwitter, and
+              #DigitalHealth — showing strong engagement around innovation,
+              education, and systemic critiques.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container-02">
+          <img
+            id="twitter"
+            src="Images/top_hashtags.jpg"
+            alt="Most Frequently Used Hashtags After Removing Overrepresented Hashtags"
+            style="max-width: 100%; height: auto"
+          />
+        </div>
+      </div>
+
+      <div class="key-insights-04">
+        <div class="project-text">
+          <ul class="key-bullets-points">
+            <li>
+              General Practice consistently recorded the highest number of
+              appointments across all months and quarters. Care-related
+              encounters were the dominant context type, especially under
+              national categories like General Consultation Acute and Routine.
+              The top five locations based on record counts were found to be in
+              and around London.
+            </li>
+          </ul>
+        </div>
+        <div class="image-container">
+          <img
+            id="twitter"
+            src="Images/appts_seasonal_trends_service_settings.jpg"
+            alt="Number of Patient Appointments per Service Setting in 1st Quarter (June - August 2021)"
+          />
+        </div>
+      </div>
+
+      <p class="projects-intro">
+        For a complete picture, feel free to look at my report and complete
+        Python code in the Jupyter Notebook on GitHub.
+      </p>
+
+      <div class="tile-container">
+        <a
+          href="https://drive.google.com/file/d/1c_dddFoiITJsw7q2I1wJR5PV1butyDse/view?usp=drive_link"
+          target="_blank"
+          class="tile"
+          title="PDF Report"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M200,164v8h12a12,12,0,0,1,0,24H200v12a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12h32a12,12,0,0,1,0,24ZM92,172a32,32,0,0,1-32,32H56v4a12,12,0,0,1-24,0V152a12,12,0,0,1,12-12H60A32,32,0,0,1,92,172Zm-24,0a8,8,0,0,0-8-8H56v16h4A8,8,0,0,0,68,172Zm100,8a40,40,0,0,1-40,40H112a12,12,0,0,1-12-12V152a12,12,0,0,1,12-12h16A40,40,0,0,1,168,180Zm-24,0a16,16,0,0,0-16-16h-4v32h4A16,16,0,0,0,144,180ZM36,108V40A20,20,0,0,1,56,20h96a12,12,0,0,1,8.49,3.52l56,56A12,12,0,0,1,220,88v20a12,12,0,0,1-24,0v-4H148a12,12,0,0,1-12-12V44H60v64a12,12,0,0,1-24,0ZM160,57V80h23Z"
+            ></path>
+          </svg>
+        </a>
+
+        <a
+          href="https://github.com/abbass97/project-nhs/blob/main/nhs_data.ipynb"
+          target="_blank"
+          class="tile"
+          title="Python Code"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="ionicon"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z"
+            />
+          </svg>
+        </a>
+      </div>
+    </article>
+
+    <footer class="connect">
+      <h4 class="tertiary-heading">Thank you for visiting my portfolio!</h4>
+      <p class="collab">
+        If you’d like to collaborate or get in touch, I’d love to hear from you.
+      </p>
+
+      <!-- Contact Icons Row -->
+      <div class="icon-row">
+        <!-- Let's Connect (form) -->
+        <a href="/contact.html" class="icon-link" title="Let’s Connect"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="icon-image"
+            fill="#004225"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M232,96a16,16,0,0,0-16-16H184V48a16,16,0,0,0-16-16H40A16,16,0,0,0,24,48V176a8,8,0,0,0,13,6.22L72,154V184a16,16,0,0,0,16,16h93.59L219,230.22a8,8,0,0,0,5,1.78,8,8,0,0,0,8-8Zm-42.55,89.78a8,8,0,0,0-5-1.78H88V152h80a16,16,0,0,0,16-16V96h32V207.25Z"
+            ></path>
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/saimaabbas52"
+          target="_blank"
+          class="icon-link"
+          title="LinkedIn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="icon-image"
+            fill="#004225"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"
+            ></path>
+          </svg>
+        </a>
+        <!-- Email -->
+        <a
+          href="mailto:saimaabbas2021@gmail.com"
+          class="icon-link"
+          title="Email"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            class="icon-image"
+            fill="#004225"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M104,152a8,8,0,0,1-8,8H56a8,8,0,0,1,0-16H96A8,8,0,0,1,104,152ZM168,32h24a8,8,0,0,0,0-16H160a8,8,0,0,0-8,8V56h16Zm72,84v60a16,16,0,0,1-16,16H136v32a8,8,0,0,1-16,0V192H32a16,16,0,0,1-16-16V116A60.07,60.07,0,0,1,76,56h76v88a8,8,0,0,0,16,0V56h12A60.07,60.07,0,0,1,240,116Zm-120,0a44,44,0,0,0-88,0v60h88Z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <p id="personal-brand">
+        © 2025 Saima Abbas | Designed, developed, and deployed by me &ndash;
+        powered by curiosity and caffeine.
+      </p>
+    </footer>
+  </body>
+</html>
